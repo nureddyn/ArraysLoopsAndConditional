@@ -153,15 +153,32 @@ You should be modifying the elements by accessing them. It is up to you which me
 // 1. Write code that logs "Love me, pet me! HSSSSSS!" 20 times.
 /* 2. For every even number in your loop, log "...human...why you taking pictures of me?...",
 "...the catnip made me do it...", or "...why does the red dot always get away..." at random.*/
-let sentences = [
-    "...human...why you taking pictures of me?...",
-    "...the catnip made me do it...",
-    "...why does the red dot always get away..."
-]
-for (let times = 0; times < 20; times++) {
-    console.log("Love me, pet me! HSSSSSS!");
-    if (times % 2 === 0) {
-        let randomIndex = Math.floor(Math.random() * sentences.length);
-        console.log(sentences[randomIndex]);
-    }
+// let sentences = [
+//     "...human...why you taking pictures of me?...",
+//     "...the catnip made me do it...",
+//     "...why does the red dot always get away..."
+// ]
+// for (let times = 0; times < 20; times++) {
+//     console.log("Love me, pet me! HSSSSSS!");
+//     if (times % 2 === 0) {
+//         let randomIndex = Math.floor(Math.random() * sentences.length);
+//         console.log(sentences[randomIndex]);
+//     }
+// }
+
+/////////////////////////////////
+// Find the Median
+/////////////////////////////////
+
+// - Find the median number in the following nums array, then console.log that number.
+const nums = [14,11,16,15,13,16,15,17,19,11,12,14,19,11,15,17,11,18,12,17,12,71,18,15,12];
+nums.sort()
+
+function median(array) {
+    let result;
+    if (array.length % 2 === 0) {
+        result = (array[(array.length / 2) - 1] + array[(array.length / 2)]) / 2;
+} else result = array[Math.floor((array.length - 1) / 2) + 1];
+    return result;
 }
+console.log(median(nums));
