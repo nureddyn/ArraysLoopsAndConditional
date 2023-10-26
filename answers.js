@@ -73,56 +73,75 @@ You should be modifying the elements by accessing them. It is up to you which me
 // Methods, Revisited
 /////////////////////////////////
 // Here is a list of favMovies:
-const favMovies = [
-    'Jaws', 'The Fellowship of the Ring', 'Howl\'s Moving Castle', 'Django Unchained',
-    'Cloud Atlas', 'The Usual Suspects', 'Toy Story', 'Conan the Barbarian', 'Titanic',
-    'Harry Potter', 'Fried Green Tomatoes', 'Volver', 'Oculus', 'Seven', 'Black Panther',
-    'Harry Potter', 'Imitation of Life', 'Snatch', 'Fast and Furious'
+// const favMovies = [
+//     'Jaws', 'The Fellowship of the Ring', 'Howl\'s Moving Castle', 'Django Unchained',
+//     'Cloud Atlas', 'The Usual Suspects', 'Toy Story', 'Conan the Barbarian', 'Titanic',
+//     'Harry Potter', 'Fried Green Tomatoes', 'Volver', 'Oculus', 'Seven', 'Black Panther',
+//     'Harry Potter', 'Imitation of Life', 'Snatch', 'Fast and Furious'
+// ];
+// // - Console log: the index of Titanic
+// console.log(favMovies.indexOf('Titanic'));
+
+// /* - Do the following and console.log the final results (I have included some thought questions,
+// you don't have to write out an answer for those marked as such):
+// */
+// // 1. use the .sortmethod Thought question: what did this do to the array? Did it permanently alter it?
+// favMovies.sort();
+
+// // A. The sort() method returned the same array sorted alphabetically.
+
+// // 2. Use the method pop
+// favMovies.pop();
+
+// // 3. push "Guardians of the Galaxy"
+// favMovies.push("Guardians of the Galaxy");
+// // 4. Reverse the array
+// favMovies.reverse();
+
+// // 5. Use the shift method
+// favMovies.shift();
+// // 6. unshift- what does it return?
+// // A. unshift() method returns the array with the new element provided, placed at the beginning
+
+// /* 7. splice "Django Unchained" and add "Avatar" (try finding the index of "Django Unchained", instead of counting it yourself)
+// Thought question: did this permanently alter our array?
+// */
+// favMovies.splice(favMovies.indexOf("Django Unchained"), 1, "Avatar");
+// // A. the splice method altered the original array.
+
+// /* 8. slice the last half of the array (challenge yourself and try to programatically determine the middle of the array
+// rather than counting it and hard coding it) - Thought question: did this permanently alter our array?
+// */
+// favMovies.splice(favMovies.length / 2, favMovies.length);
+
+// // 9. store the value of your slice in a variable, console.log it - Thought question: what is going on here?
+// let myVariable = favMovies.splice(favMovies.length / 2, favMovies.length);
+// console.log(myVariable);
+
+// // 10. console.log your final results
+// console.log(favMovies);
+
+// /* 11. After running the above tasks, console.log the index of "Fast and Furious" -We removed it from the array,
+// what value do we get when we look for the index of something that is not in the array?
+// */
+// console.log(favMovies.indexOf("Fast and Furious"));
+// // A. -1.
+
+/////////////////////////////////
+// Where is Waldo
+/////////////////////////////////
+
+// With the following multi-dimensional array
+const whereIsWaldo = [
+        ["Timmy", "Frank"], "Eggbert",
+        ["Lucinda", "Jacc", "Neff", "Snoop"],
+        ["Petunia", ["Baked Goods", "Waldo"]]
 ];
-// - Console log: the index of Titanic
-console.log(favMovies.indexOf('Titanic'));
+// Remove Eggbert (hint look at the slice/splice method(s))
+whereIsWaldo.splice(1, 1);
 
-/* - Do the following and console.log the final results (I have included some thought questions,
-you don't have to write out an answer for those marked as such):
-*/
-// 1. use the .sortmethod Thought question: what did this do to the array? Did it permanently alter it?
-favMovies.sort();
+// Change "Neff" to "No One"
+whereIsWaldo[1][2] = "No one";
 
-// A. The sort() method returned the same array sorted alphabetically.
-
-// 2. Use the method pop
-favMovies.pop();
-
-// 3. push "Guardians of the Galaxy"
-favMovies.push("Guardians of the Galaxy");
-// 4. Reverse the array
-favMovies.reverse();
-
-// 5. Use the shift method
-favMovies.shift();
-// 6. unshift- what does it return?
-// A. unshift() method returns the array with the new element provided, placed at the beginning
-
-/* 7. splice "Django Unchained" and add "Avatar" (try finding the index of "Django Unchained", instead of counting it yourself)
-Thought question: did this permanently alter our array?
-*/
-favMovies.splice(favMovies.indexOf("Django Unchained"), 1, "Avatar");
-// A. the splice method altered the original array.
-
-/* 8. slice the last half of the array (challenge yourself and try to programatically determine the middle of the array
-rather than counting it and hard coding it) - Thought question: did this permanently alter our array?
-*/
-favMovies.splice(favMovies.length / 2, favMovies.length);
-
-// 9. store the value of your slice in a variable, console.log it - Thought question: what is going on here?
-let myVariable = favMovies.splice(favMovies.length / 2, favMovies.length);
-console.log(myVariable);
-
-// 10. console.log your final results
-console.log(favMovies);
-
-/* 11. After running the above tasks, console.log the index of "Fast and Furious" -We removed it from the array,
-what value do we get when we look for the index of something that is not in the array?
-*/
-console.log(favMovies.indexOf("Fast and Furious"));
-// A. -1.
+// Access and console.log "Waldo"
+console.log(whereIsWaldo[2][1][1]);
