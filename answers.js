@@ -187,12 +187,51 @@ You should be modifying the elements by accessing them. It is up to you which me
 // Fibonacci
 /////////////////////////////////
 // Return the first 'number' elements of the Fibonacci sequence
-function fib(n) {
-    if (n <= 0) return 0;
-    else if (n === 1) return 1;
-    return fib(n - 1) + fib(n - 2);
-}
-let number = 6
-for (let i = 0; i < number; i++) {
-    console.log(fib(i));
-}
+// function fib(n) {
+//     if (n <= 0) return 0;
+//     else if (n === 1) return 1;
+//     return fib(n - 1) + fib(n - 2);
+// }
+// let number = 6
+// for (let i = 0; i < number; i++) {
+//     console.log(fib(i));
+// }
+
+
+const kristynsCloset = [
+    "left shoe",
+    "cowboy boots",
+    "right sock",
+    "Per Scholas hoodie",
+    "green pants",
+    "yellow knit hat",
+    "marshmallow peeps"
+  ];
+  
+  // Thom's closet is more complicated. Check out this nested data structure!!
+  const thomsCloset = [
+    [
+      // These are Thom's shirts
+      "grey button-up",
+      "dark grey button-up",
+      "light blue button-up",
+      "blue button-up",
+    ],[
+      // These are Thom's pants
+      "grey jeans",
+      "jeans",
+      "PJs"
+    ],[
+      // Thom's accessories
+      "wool mittens",
+      "wool scarf",
+      "raybans"
+    ]
+  ];
+
+let kristynsShoe = kristynsCloset[0];
+kristynsCloset.shift();
+thomsCloset[2].push(kristynsShoe);
+
+console.log(`Kristyn is wearing a ${kristynsCloset[1]}, a ${kristynsCloset[3]} and a ${kristynsCloset[4]}`);
+console.log(`Thom is wearing a ${thomsCloset[0][3]}, a ${thomsCloset[1][0]} and a ${thomsCloset[2][0]}`);
