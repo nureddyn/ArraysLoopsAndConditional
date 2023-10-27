@@ -172,7 +172,7 @@ You should be modifying the elements by accessing them. It is up to you which me
 
 // - Find the median number in the following nums array, then console.log that number.
 const nums = [14,11,16,15,13,16,15,17,19,11,12,14,19,11,15,17,11,18,12,17,12,71,18,15,12];
-nums.sort()
+nums.sort((a, b) => a - b);
 
 function median(array) {
     let result;
