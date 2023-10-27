@@ -229,9 +229,28 @@ const kristynsCloset = [
     ]
   ];
 
-let kristynsShoe = kristynsCloset[0];
-kristynsCloset.shift();
-thomsCloset[2].push(kristynsShoe);
+// let kristynsShoe = kristynsCloset[0];
+// kristynsCloset.shift();
+// thomsCloset[2].push(kristynsShoe);
 
-console.log(`Kristyn is wearing a ${kristynsCloset[1]}, a ${kristynsCloset[3]} and a ${kristynsCloset[4]}`);
-console.log(`Thom is wearing a ${thomsCloset[0][3]}, a ${thomsCloset[1][0]} and a ${thomsCloset[2][0]}`);
+// console.log(`Kristyn is wearing a ${kristynsCloset[1]}, a ${kristynsCloset[3]} and a ${kristynsCloset[4]}`);
+// console.log(`Thom is wearing a ${thomsCloset[0][3]}, a ${thomsCloset[1][0]} and a ${thomsCloset[2][0]}`);
+
+
+/////////////////////////
+// Dirty Laundry
+////////////////////////
+/*1. Time to do laundry - loop through Kristyn's closet and log
+the sentence "WHIRR: Now washing (item)" for each item in the array.
+*/
+kristynsCloset.forEach(item => console.log(`WHIRR: Now washing ${item}`));
+
+/////////////////////////
+// Inventory
+////////////////////////
+/* Thom wants to do inventory on his closet. Using bracket notation, 
+log the arrays containing all of Thom's shirts, pants, and accessories.
+*/
+thomsCloset.forEach((division) => {
+    division.forEach(item => console.log(item));
+});
