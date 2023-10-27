@@ -171,14 +171,28 @@ You should be modifying the elements by accessing them. It is up to you which me
 /////////////////////////////////
 
 // - Find the median number in the following nums array, then console.log that number.
-const nums = [14,11,16,15,13,16,15,17,19,11,12,14,19,11,15,17,11,18,12,17,12,71,18,15,12];
-nums.sort((a, b) => a - b);
+// const nums = [14,11,16,15,13,16,15,17,19,11,12,14,19,11,15,17,11,18,12,17,12,71,18,15,12];
+// nums.sort((a, b) => a - b);
 
-function median(array) {
-    let result;
-    if (array.length % 2 === 0) {
-        result = (array[(array.length / 2) - 1] + array[(array.length / 2)]) / 2;
-} else result = array[Math.floor((array.length - 1) / 2) + 1];
-    return result;
+// function median(array) {
+//     let result;
+//     if (array.length % 2 === 0) {
+//         result = (array[(array.length / 2) - 1] + array[(array.length / 2)]) / 2;
+// } else result = array[Math.floor((array.length - 1) / 2) + 1];
+//     return result;
+// }
+// console.log(median(nums));
+
+/////////////////////////////////
+// Fibonacci
+/////////////////////////////////
+// Return the first 'number' elements of the Fibonacci sequence
+function fib(n) {
+    if (n <= 0) return 0;
+    else if (n === 1) return 1;
+    return fib(n - 1) + fib(n - 2);
 }
-console.log(median(nums));
+let number = 6
+for (let i = 0; i < number; i++) {
+    console.log(fib(i));
+}
